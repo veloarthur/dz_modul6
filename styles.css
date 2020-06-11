@@ -1,3 +1,10 @@
+:root {
+  --secondary-font-family: Roboto;
+  --secondary-color: #999999;
+  --secondary-font-size: 15px;
+  --secondary-line-height: 24px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -190,30 +197,38 @@ img {
 /* description of MEET section */
 .Meetings {
   padding-top: 13px;
+  padding-bottom: 82px;
 }
 
 .sections-description {
-  color: #999999;
-  font-family: Roboto;
-  font-size: 15px;
-  line-height: 24px;
+  font-family: var(--secondary-font-family);
+  color: var(--secondary-color);
+  font-size: var(--secondary-font-size);
+  line-height: var(--secondary-line-height);
+  margin-bottom: 91px;
   text-align: center;
 }
 
 /* fotos description */
 .fotos__item {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.fotos__item_list {
   width: 380px;
   text-align: center;
   position: relative;
 }
 
-.fotos__item:hover .overlay {
+.fotos__item_list:hover .overlay {
   opacity: 1;
   visibility: visible;
   transform: translate(-10px, -10px);
 }
 
-.fotos__item:hover .fotos__item-img {
+.fotos__item_list:hover .fotos__item-img {
   transform: translate(-10px, -10px);
   box-shadow: 10px 10px 0 0 #95e1d3;
 }
@@ -231,14 +246,15 @@ img {
 }
 
 .fotos__item-img {
-  margin-bottom: 16px;
+  margin-bottom: 31px;
 }
 
 .social-list {
   position: absolute;
   left: 50%;
+  top: 44%;
   transform: translateX(-50%);
-  bottom: 32px;
+
   display: flex;
 }
 
@@ -273,8 +289,46 @@ img {
   background-image: url("./icons/instagram.png");
 }
 
+.fotos__item-name {
+  text-transform: uppercase;
+}
+
+.fotos__item-position {
+  font-family: var(--secondary-font-family);
+  color: var(--secondary-color);
+  font-size: var(--secondary-font-size);
+  line-height: var(--secondary-line-height);
+  font-weight: 300;
+  font-style: italic;
+}
+
+
+
 
 /* footer description */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  margin-top: 10px;
+}
+
+.footer::before {
+  width: 100%;
+  border-top: 1px solid red;
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: -10px;
+}
+
+.footer-link {
+  color: #f38181;
+  text-decoration: none;
+}
+
 .contact-form {
   display: flex;
 }
@@ -282,6 +336,13 @@ img {
 .contact-form__input {
   height: 40px;
   padding-left: 10px;
+  color: #cccccc;
+  font-family: var(--secondary-font-family);
+  font-size: var(--secondary-font-size);
+  line-height: var(--secondary-line-height);
+  font-weight: 300;
+  font-style: italic;
+  text-transform: capitalize;
 }
 
 .contact-form__input::placeholder {
@@ -291,6 +352,8 @@ img {
 
 .contact-form__btn {
   border: none;
-  background-color: teal;
+  background-color: #95e1d3;
   color: #fff;
+  text-transform: uppercase;
+  font-weight: 700;
 }
