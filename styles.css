@@ -102,7 +102,11 @@ img {
 
 .navigation__list-link:hover {
   color: #f38181;
-  transition: opacity 0.2s linear;
+
+}
+
+.navigation__list-link {
+  text-decoration: none;
 }
 
 /* description of AMAZING section */
@@ -242,11 +246,12 @@ img {
   left: 0;
   visibility: hidden;
   opacity: 0;
-  transition: opacity 0.2s linear;
+  transition: opacity, transform, 0.2s linear;
 }
 
 .fotos__item-img {
   margin-bottom: 31px;
+  transition: box-shadow, transfotm .2s linear;
 }
 
 .social-list {
@@ -312,11 +317,12 @@ img {
   align-items: center;
   position: relative;
   margin-top: 10px;
+  padding-bottom: 12px;
 }
 
 .footer::before {
   width: 100%;
-  border-top: 1px solid red;
+  border-top: 1px solid #e5e5e5;
   content: "";
   display: block;
   position: absolute;
@@ -335,24 +341,28 @@ img {
 
 .contact-form__input {
   height: 40px;
-  padding-left: 10px;
-  color: #cccccc;
+  width: 230px;
+
+  border: 1px solid #e7e7e7;
+}
+
+.contact-form__input::placeholder {
+  text-transform: capitalize;
   font-family: var(--secondary-font-family);
   font-size: var(--secondary-font-size);
   line-height: var(--secondary-line-height);
   font-weight: 300;
   font-style: italic;
-  text-transform: capitalize;
-}
+  padding-left: 13px;
+  color: #ccc;
 
-.contact-form__input::placeholder {
-  text-transform: uppercase;
-  font-size: italic;
+
 }
 
 .contact-form__btn {
   border: none;
   background-color: #95e1d3;
+  width: 150px;
   color: #fff;
   text-transform: uppercase;
   font-weight: 700;
