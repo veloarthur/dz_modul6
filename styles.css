@@ -251,7 +251,7 @@ img {
 
 .fotos__item-img {
   margin-bottom: 31px;
-  transition: box-shadow, transfotm .2s linear;
+  transition: box-shadow, transfotm 0.2s linear;
 }
 
 .social-list {
