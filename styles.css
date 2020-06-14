@@ -226,13 +226,13 @@ img {
   position: relative;
 }
 
-.fotos__item_list:hover .overlay {
+.fotos_wrapper:hover .overlay {
   opacity: 1;
   visibility: visible;
   transform: translate(-10px, -10px);
 }
 
-.fotos__item_list:hover .fotos__item-img {
+.fotos_wrapper:hover .fotos__item-img {
   transform: translate(-10px, -10px);
   box-shadow: 10px 10px 0 0 #95e1d3;
 }
@@ -271,7 +271,15 @@ img {
   background-position: center;
   background-color: #fce38a;
   transition: background-color 0.2s linear;
-  border: 1px solid #f38181;
+
+}
+
+.social-list__item {
+  border-right: 1px solid #f38181;
+}
+
+.social-list__item:last-child {
+  border-right: transparent;
 }
 
 .social-list__item-link:hover {
