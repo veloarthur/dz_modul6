@@ -234,7 +234,10 @@ img {
 
 .fotos_wrapper:hover .fotos__item-img {
   transform: translate(-10px, -10px);
-  box-shadow: 10px 10px 0 0 #95e1d3;
+}
+
+.fotos_wrapper {
+  background-color: #95e1d3;
 }
 
 .overlay {
@@ -251,7 +254,7 @@ img {
 
 .fotos__item-img {
   margin-bottom: 31px;
-  transition: box-shadow, transfotm 0.2s linear;
+  transition: transform 0.2s linear;
 }
 
 .social-list {
@@ -259,7 +262,6 @@ img {
   left: 50%;
   top: 44%;
   transform: translateX(-50%);
-
   display: flex;
 }
 
